@@ -1,4 +1,4 @@
-package com.example.ZonusAudio;
+package ru.echolotfm.fingerprint;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -14,7 +14,6 @@ import android.media.MediaRecorder.AudioSource;
 import android.util.Log;
 
 import com.musicg.dsp.WindowFunction;
-import com.musicg.properties.FingerprintProperties;
 import com.sun.media.sound.FFT;
 
 import java.io.File;

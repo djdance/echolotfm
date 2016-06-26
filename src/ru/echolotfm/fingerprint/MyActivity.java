@@ -1,8 +1,7 @@
-package com.example.ZonusAudio;
+package ru.echolotfm.fingerprint;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.*;
 import android.widget.ImageView;
 import android.widget.Toast;
