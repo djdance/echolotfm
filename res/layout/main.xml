@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <ImageView
+            android:layout_width="300px"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView" android:layout_gravity="center" android:background="#4f4b23"
+        android:layout_above="@+id/recToggleButton1" />
+
+    <ToggleButton
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Распознать"
+        android:id="@+id/searchToggleButton"
+        android:textOn="Распознать"
+        android:textOff="Распознать"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+    <ToggleButton
+        android:layout_width="150dp"
+        android:layout_height="200px"
+        android:text="Записать\nобразец\n#1"
+        android:id="@+id/recToggleButton1"
+        android:textOff="Записать\nобразец\n#1"
+        android:textOn="Записать\nобразец\n#1"
+        android:layout_above="@+id/recToggleButton2"
+        android:layout_alignParentLeft="true" />
+
+    <ToggleButton
+        android:layout_width="150dp"
+        android:layout_height="200px"
+        android:text="Записать\nобразец\n#2"
+        android:id="@+id/recToggleButton2"
+        android:textOff="Записать\nобразец\n#2"
+        android:textOn="Записать\nобразец\n#2"
+        android:layout_above="@+id/recToggleButton3"
+        android:layout_alignParentLeft="true" />
+
+    <ToggleButton
+        android:layout_width="150dp"
+        android:layout_height="200px"
+        android:text="Записать\nобразец\n#3"
+        android:id="@+id/recToggleButton3"
+        android:textOff="Записать\nобразец\n#3"
+        android:textOn="Записать\nобразец\n#3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/imageViewN1"
+        android:background="#ff0000"
+        android:layout_above="@+id/recToggleButton2"
+        android:layout_toRightOf="@+id/recToggleButton1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/imageViewN2"
+        android:background="#d60000"
+        android:layout_below="@+id/imageViewN1"
+        android:layout_toRightOf="@+id/recToggleButton1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/imageViewN3"
+        android:background="#9b0000"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/recToggleButton2" />
+
+</RelativeLayout>
+
