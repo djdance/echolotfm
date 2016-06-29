@@ -26,4 +26,4 @@
 
 **Что за алгоритм?**
 
- 
+ git branch --set-upstream master echolotfm/master
