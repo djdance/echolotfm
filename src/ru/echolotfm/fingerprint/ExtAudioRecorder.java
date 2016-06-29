@@ -467,6 +467,7 @@ public class ExtAudioRecorder {
                     poleCN[t - 1].drawText(""+(k/60)+":"+(k%60<10?"0":"")+(k%60),poleK[t - 1] * over200maximumI+5,50,poleP);
                 }
             }
+            poleN[t-1].invalidate();
         }
     }
 

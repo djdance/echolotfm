@@ -22,7 +22,7 @@
 
     <ToggleButton
         android:layout_width="150dp"
-        android:layout_height="200px"
+        android:layout_height="150px"
         android:text="Записать\nобразец\n#1"
         android:id="@+id/recToggleButton1"
         android:textOff="Записать\nобразец\n#1"
@@ -32,7 +32,7 @@
 
     <ToggleButton
         android:layout_width="150dp"
-        android:layout_height="200px"
+        android:layout_height="150px"
         android:text="Записать\nобразец\n#2"
         android:id="@+id/recToggleButton2"
         android:textOff="Записать\nобразец\n#2"
@@ -42,7 +42,7 @@
 
     <ToggleButton
         android:layout_width="150dp"
-        android:layout_height="200px"
+        android:layout_height="150px"
         android:text="Записать\nобразец\n#3"
         android:id="@+id/recToggleButton3"
         android:textOff="Записать\nобразец\n#3"
@@ -52,7 +52,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200px"
+        android:layout_height="150px"
         android:id="@+id/imageViewN1"
         android:background="#ff0000"
         android:layout_above="@+id/recToggleButton2"
@@ -60,7 +60,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200px"
+        android:layout_height="150px"
         android:id="@+id/imageViewN2"
         android:background="#d60000"
         android:layout_below="@+id/imageViewN1"
@@ -68,7 +68,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200px"
+        android:layout_height="150px"
         android:id="@+id/imageViewN3"
         android:background="#9b0000"
         android:layout_alignParentBottom="true"
