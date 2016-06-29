@@ -3,7 +3,9 @@ package ru.echolotfm.fingerprint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.*;
+import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -13,7 +15,9 @@ public class MyActivity extends Activity implements View.OnClickListener {
     ExtAudioRecorder extAudioRecorder;
     public static ImageView pole;
     public static ImageView poleN1,poleN2,poleN3;
-    ToggleButton searchButton,recButton1,recButton2,recButton3;
+    public static ToggleButton searchButton,recButton1,recButton2,recButton3;
+    CheckBox algoCB,anddrawCB;
+    public static TextView hint;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,8 +27,13 @@ public class MyActivity extends Activity implements View.OnClickListener {
         poleN1=(ImageView) findViewById(R.id.imageViewN1);
         poleN2=(ImageView) findViewById(R.id.imageViewN2);
         poleN3=(ImageView) findViewById(R.id.imageViewN3);
+        hint=(TextView) findViewById(R.id.textView);
         searchButton=(ToggleButton) findViewById(R.id.searchToggleButton);
         searchButton.setOnClickListener(this);
+        algoCB=(CheckBox) findViewById(R.id.algoCheckBox);
+        algoCB.setOnClickListener(this);
+        anddrawCB=(CheckBox) findViewById(R.id.anddrawCheckBox);
+        anddrawCB.setOnClickListener(this);
         recButton1=(ToggleButton) findViewById(R.id.recToggleButton1);
         recButton1.setOnClickListener(this);
         recButton1.setTag(1);
@@ -34,16 +43,18 @@ public class MyActivity extends Activity implements View.OnClickListener {
         recButton3=(ToggleButton) findViewById(R.id.recToggleButton3);
         recButton3.setOnClickListener(this);
         recButton3.setTag(3);
-        setTitle("Эхолот Распознавание");
+        setTitle("EcholotFM.ru - Распознавание (демо)");
     }
 
-    void startRec(int recordMode){
+    public void startRec(int recordMode,boolean liteAlgo,boolean andDraw){
         //Log.d(TAG, "starting...");
         if (extAudioRecorder!=null && extAudioRecorder.getState()== ExtAudioRecorder.State.RECORDING)
             stopRec();
         // Start recording
         extAudioRecorder = ExtAudioRecorder.getInstanse();
         extAudioRecorder.recordMode=recordMode;
+        extAudioRecorder.liteAlgo=liteAlgo;
+        extAudioRecorder.andDraw=andDraw;
         extAudioRecorder.start(getApplicationContext());
         //Log.d(TAG, "rec state=" + extAudioRecorder.getState().toString());
     }
@@ -67,7 +78,9 @@ public class MyActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v==searchButton || v==recButton1 || v==recButton2 || v==recButton3){
+        if (v==searchButton || v==algoCB || v==anddrawCB || v==recButton1 || v==recButton2 || v==recButton3){
+            if (v==algoCB || v==anddrawCB)
+                v=searchButton;
             if (v==searchButton) {
                 recButton1.setChecked(false);
                 recButton2.setChecked(false);
@@ -80,14 +93,14 @@ public class MyActivity extends Activity implements View.OnClickListener {
             }
 
             if (((ToggleButton)v).isChecked())
-                startRec(v.getTag()!=null?(Integer) (v.getTag()):0);
+                startRec(v.getTag()!=null?(Integer) (v.getTag()):0,algoCB.isChecked(),anddrawCB.isChecked());
             else
                 stopRec();
         }
 
     }
 
-    void mytoast(final String s){
+    public void mytoast(final String s){
         runOnUiThread(new Runnable() {
             public void run() {
                 Toast toast = Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT);
