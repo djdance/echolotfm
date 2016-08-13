@@ -10,7 +10,7 @@
         android:hardwareAccelerated="true"
         android:icon="@drawable/ico"
         android:largeHeap="true">
-        <activity android:name="ru.echolotfm.fingerprint.MyActivity"
+        <activity android:name="ru.echolotfm.fingerprint.MyActivity" android:screenOrientation="sensorPortrait"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

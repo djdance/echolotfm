@@ -9,6 +9,7 @@
 <img width=300 src=device-2016-07-01-150014.png>
 
 **Как использовать программу?** (скачайте EcholotFM.apk здесь или <a href=https://yadi.sk/d/zA8WYQGmsvyvZ>тут</a>) 
+Или тут: https://play.google.com/store/apps/details?id=ru.echolotfm.fingerprint
 
 1. Выберите песню на компьютере. Желательно начинающуюся сразу с мелодии.
 2. Положите телефон рядом с колонками, нажмите "Записать образец"
