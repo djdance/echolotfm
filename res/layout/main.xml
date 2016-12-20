@@ -103,5 +103,21 @@
         android:layout_alignRight="@+id/searchToggleButton"
         android:singleLine="false" />
 
+    <TextView
+        android:text="Политика конфиденциальности Privacy policy"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/anddrawCheckBox"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textViewPolicy"
+        android:layout_alignParentRight="true"
+        android:textSize="10sp"
+        android:clickable="true"
+        android:gravity="right"
+        android:onClick="onClick"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textStyle="normal|italic" />
+
 </RelativeLayout>
 

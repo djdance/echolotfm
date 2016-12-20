@@ -1,6 +1,8 @@
 package ru.echolotfm.fingerprint;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.CheckBox;
@@ -96,6 +98,11 @@ public class MyActivity extends Activity implements View.OnClickListener {
                 startRec(v.getTag()!=null?(Integer) (v.getTag()):0,algoCB.isChecked(),anddrawCB.isChecked());
             else
                 stopRec();
+        }
+        if (v==findViewById(R.id.textViewPolicy)){
+            Uri uri = Uri.parse("https://github.com/djdance/echolotfm");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         }
 
     }
