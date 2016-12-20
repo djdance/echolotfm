@@ -49,3 +49,5 @@ BARK-шкала + LS-хеш могут являться патентованны
  Никакие данные не отправляются наружу, не передаются третьим лицам и не анализируются иначе, кроме как для демонстрационных целей.
  Указанный хеш не позволяет расшифровать звук в обратном направлении.
  Установка программы означает согласие пользователя на включение микрофона. В противном случае не запускайте программу.
+
+ In English: read Russian please. android.permission.RECORD_AUDIO is used only for demo. By installing the application you agree with it. No data will be send out of your device.
